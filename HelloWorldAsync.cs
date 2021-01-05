@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 #endregion
 
 /// <summary>
+/// Quick demonstration on async operations from lambdas, delegates and anonymous function
 /// <see href="https://vscode.readthedocs.io/en/latest/other/dotnet/"> Example VS code console app </see>
 /// </summary>
 class HelloWorldAsync {
@@ -57,7 +58,7 @@ class HelloWorldAsync {
    public static async void baz () {
       for (var i = 0; i < MAX_ITER; i++) {
          int val = await foo (i * new Random ().Next (MAX_DELAY));
-         System.Console.WriteLine ($"From anonymous method #{i} with delay {val} [ms].");
+         System.Console.WriteLine ($"From anonymous function #{i} with delay {val} [ms].");
       }
    }
 
